@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="keywords"content="shop,products">
+<meta name="description"content="Welcome to my shop! Let's have a look !">
+<link rel="stylesheet"href="shop.css"type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+<script src="shop.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://kit.fontawesome.com/61630affa7.js"></script>
+<title>E-Shop</title>
+</head>
+<body>
+<main>
+<div class="conteiner">
+    <div class="menu">
+            <a href="https://www.facebook.com/adrian.raszka.731"target="blank"> <div class="logo"><img src="img/DEVadrian.png"alt="logo"></div></a>
+        <nav>
+        <div class="nav">
+            <a href="file:///C:/Users/User/Desktop/WWW/shop.html"><li>Products</li></a>
+            <a href="#"><li>Contact</li></a>
+            <a href="#"><li>About us</li></a>
+            <a href="#"><li>Cart<i class="fas fa-cart-plus"></i></li></a>
+        </div>
+    </nav>
+    </div>
+<section>
+<div class="slider"><img src="img/laptop0.jpeg"alt="laptop"></div>
+    <div class="slider-change">       
+        <div class="slide-changer"id="slide-changer"onclick="slide1()"></div>
+        <div class="slide-changer"id="slide-changer1"onclick="slide2()"></div>
+        <div class="slide-changer"id="slide-changer2"onclick="slide3()"></div>
+    </div>
+</section>
+<article>
+<div class="box">
+    <div class="image"><img src="img/laptop.jpg"alt="laptop"></div>
+    <div class="text">
+        <header>
+           <div class="write"><h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1></div>
+        </header>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, fugiat vero ut explicabo, illum error similique 
+            tempora beatae, magnam illo optio impedit animi. Maxime dolorum odit, dolorem minima iusto Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Distinctio expedita ut recusandae placeat, explicabo error illum accusamus mollitia quae ullam fugiat amet, iste hic necessitatibus
+            ipsam deserunt voluptatum repudiandae nulla!
+            Eum dolore tempora ad ipsum consequuntur ut quos, temporibus similique quidem praesentium? Suscipit sit non unde, ut aut consequuntur
+            laboriosam? Assumenda maiores nam facilis nulla maxime, provident consequuntur corrupti quia.
+            Aliquid magnam perspiciatis, dolorum pariatur necessitatibus libero rerum quam ducimus, beatae modi sint doloribus ex. Vero corrupti quibusdam
+            alias omnis? A natus quam voluptatum repellat? Dolorum maiores ad aspernatur repellat!
+            Accusamus quos ratione id ipsum impedit, est omnis illum atque earum accusantium explicabo obcaecati eum adipisci modi reiciendis officiis
+            magnam vitae veritatis eius? Aut aspernatur earum beatae dolore at ratione.</p>
+    </div>
+    <a href="file:///C:/Users/User/Desktop/WWW/specification.html"target="blank"><button class="btn btn1">Read</button></a>
+    <div id="text">
+            <header>
+                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h1>
+            </header>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, fugiat vero ut explicabo, illum error similique 
+                tempora beatae, magnam illo optio impedit animi. Maxime dolorum odit, dolorem minima iusto Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Distinctio expedita ut recusandae placeat, explicabo error illum accusamus mollitia quae ullam fugiat amet, iste hic necessitatibus
+                ipsam deserunt voluptatum repudiandae nulla!
+                Eum dolore tempora ad ipsum consequuntur ut quos, temporibus similique quidem praesentium? Suscipit sit non unde, ut aut consequuntur
+                laboriosam? Assumenda maiores nam facilis nulla maxime, provident consequuntur corrupti quia.
+                Aliquid magnam perspiciatis, dolorum pariatur necessitatibus libero rerum quam ducimus, beatae modi sint doloribus ex. Vero corrupti quibusdam
+                alias omnis? A natus quam voluptatum repellat? Dolorum maiores ad aspernatur repellat!
+                Accusamus quos ratione id ipsum impedit, est omnis illum atque earum accusantium explicabo obcaecati eum adipisci modi reiciendis officiis
+                magnam vitae veritatis eius? Aut aspernatur earum beatae dolore at ratione.</p>   
+    </div>
+    <div id="image"><img src="img/laptop.jpg"alt="laptop"></div>
+    <button class="btn btn2">Read</button>  
+</div>
+<div class="box-2">
+    <div class="text1"><h1>Lorem, ipsum dolor</h1>
+        <p>sit amet consectetur adipisicing elit. Reiciendis hic 
+        quia, voluptate quibusdam alias dolorum velit cumque earum obcaecati omnis, exercitationem est nemo labore 
+        doloribus cum deleniti nesciunt voluptatem maiores.</p>
+    </div>
+    <div class="images">
+        <img src="img/asus.jpg"alt="laptop">
+        <img src="img/huawei.jpg"alt="laptop">
+        <img src="img/kiano.jpg"alt="laptop">
+        <img src="img/msi.jpg"alt="laptop">
+    </div>
+</div>
+</article>
+    <footer>
+        <div class="footer"id="footer">
+            <div class="social"><i class="fab fa-facebook-f"></i></div>
+            <div class="social"><i class="fab fa-instagram"></i></div>
+            <div class="social"><i class="fab fa-google-plus-g"></i></div>
+            <div class="social"><i class="fab fa-twitter"></i></div>             
+        </div>
+        <p class="rights"id="rights">Tak tu też prawa zastrzeżone:)))</p>  
+     
+    </footer>
+</div>  
+</main>
+<script>
+const $scroll=$(document);
+const $text=$('.text');
+const $text2=$('#text');
+const $img=$('.image');
+const $img2=$('#image');
+const $btn1=$('.btn1');
+const $btn2=$('.btn2');
+$scroll.on('scroll', function(){
+  const scrollPos = $scroll.scrollTop();
+  if(scrollPos>250){
+    $text.css({
+    'right':'10%'
+}) 
+    $img.css({
+    'left':'0'
+})
+    $btn1.css({
+    'opacity':'1'
+})  
+ }
+ if(scrollPos>1100){
+    $text.css({
+     'right':'100%'
+    }) 
+    $img.css({
+    'left':'-120%'
+}) 
+    $btn2.css({
+    'opacity':'1'
+})  
+ }
+ if(scrollPos>1050){
+    $text2.css({
+    'left':'10%',
+    }) 
+ 
+    $img2.css({
+    'right':'0',
+})
+    $btn1.css({
+    'opacity':'0'
+})  
+ }
+ if(scrollPos>1750){
+    $text2.css({
+     'left':'120%',
+    }) 
+    $img2.css({
+    'right':'-100%'
+}) 
+    $btn2.css({
+    'opacity':'0'
+})   
+ }
+})
+window.sr=ScrollReveal();
+sr.reveal('.text1,.images',{delay:300}) 
+</script>
+</body>
+</html>

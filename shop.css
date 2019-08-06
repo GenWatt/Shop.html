@@ -1,0 +1,454 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    overflow-x:hidden;
+}
+.conteiner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.menu{
+    background-color: blueviolet;
+    color: white;
+    width: 100%;
+    height: 85px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex:0.3;
+    align-items: center;
+}
+.nav a{
+   padding-top: 20px;
+   padding-bottom: 20px;
+   width: 100px;
+   text-align: center;
+}
+.nav a:hover{
+    background: rgb(163, 65, 255);
+    border-left: 1px solid rgb(174, 129, 216);
+    border-right: 1px solid rgb(174, 129, 216);
+    cursor: pointer;
+}
+.fa-cart-plus{
+    position: static;
+}
+li i{
+   top:35px;
+   margin-left: 5px;
+}
+.slider{
+    position: relative;
+}
+.slider>img{
+    width: 100%;
+    height: 90vh;
+}
+.slider:hover{
+    opacity: 0.8; 
+} 
+.slider-change{
+    display: flex;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.slide-changer{
+    width:20px;
+    height:20px;
+    margin-left: 20px;
+    border: 2px solid orange;
+    border-radius: 50%;
+}
+.slide-changer:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+#slide-changer{
+    background-color: orange;
+    border: 2px solid white;
+}
+article{   
+    width: 100%;
+}
+.box{
+    position: relative;
+}
+.image{
+    width: 45%;
+    position: absolute;
+    left: -120%;
+    transition: all 0.3s ease-in-out;
+}
+.image img{
+    width: 100%;
+}
+h1{
+    text-align: center;
+}
+.text{
+    width: 45%;
+    text-align: justify;
+    position: absolute;
+    right: 100%;
+    top:100px;
+    transition: all 0.5s ease-in-out; 
+}
+.btn{
+    color: blueviolet;
+    background-color: white;
+    border: 1px solid blueviolet;
+    padding: 10px;
+    outline: none;
+    transition: all 0.5s linear;
+}
+.btn:hover{
+    color:white;
+    border: 1px solid white; 
+    cursor: pointer;
+}
+.btn::before{
+    content: " ";
+    background-color: blueviolet;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    transition: all 0.5s linear; 
+    z-index: -1; 
+}
+.btn1{
+    width: 150px;
+    position: relative;
+    left:50%;
+    top:600px;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+.btn1::before{
+    transform: scaleX(0.2);
+}
+.btn1:hover::before{
+    height: 100%;
+    transform: scaleX(1);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;  
+}
+#text{
+    width: 45%;
+    text-align: justify;
+    position: absolute;
+    left: 120%;
+    top:900px;
+    transition: all 0.5s ease-in-out; 
+}
+#image{
+    width: 45%;
+    position: absolute;
+    right:-100%;
+    top:800px;
+    transition: all 0.3s ease-in-out;
+}
+#image img{
+    width: 100%;
+}
+.btn2{
+    width: 150px;
+    position: relative;
+    left:41%;
+    top:1400px;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+.btn2::before{
+    transform: scaleX(0);
+    transition-timing-function:cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+.btn2:hover::before{
+    transform: scaleX(1);
+    height: 100%;
+    transform-origin: 0 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.box-2{
+    position: relative;
+    top:1500px;
+    display: flex;
+    margin-left: 10%;
+    flex-wrap: wrap;
+}
+.text1{
+    width: 90%;
+    text-align: center;
+}
+.images img{
+    width:40%;
+    margin-right: 9%;
+    margin-top: 15px;
+    transition: all 0.5s linear;
+}
+.images img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+footer{
+    width: 100%;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 50px;
+    width: 100%;
+    background-color: black; 
+    color: white;
+}
+#footer{
+    position: relative;
+    top:1700px;
+}
+.social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color:white;
+    position: relative;
+}
+.social::before{
+    content: " ";
+    background-color: orange;
+    width: 100%;
+    height: 0;
+    border-radius: 50%;
+    position: absolute;
+    transition: all 0.5s linear;
+}
+.social:hover::before{
+    height: 100%;
+    transform: scale(1.2);
+}
+i{
+    position: absolute;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.rights{
+   margin:0;
+   text-align: center;
+   font-size: 10px;
+   color: white;
+   background-color: black;
+}
+#rights{
+    position: relative;
+    top:1700px;
+}
+/*css for specyfication.html*/
+.box-specification{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    border: 2px solid blueviolet;
+    margin:5%;
+}
+.slider2{
+    margin: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.slider2 img{
+    width: 200px;
+    height: 200px; 
+}
+.swipe-left{
+    display: flex;
+    background-color: black;
+    width: 50px;
+    height: 200px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+}
+.swipe-left:hover{
+    opacity: 0.5;
+}
+.swipe-right{
+    display: flex;
+    background-color: black;
+    width: 50px;
+    height: 200px;
+    position: absolute;
+    top:0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+}
+.swipe-right:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+.description h1{
+    text-decoration: underline;
+}
+.description p{
+    text-align: center;
+}
+.add-to-cart{
+    width: 200px;
+    height: 100px;
+    background-color: white;
+    color:blueviolet;
+    border: 1px solid blueviolet;
+    outline: none;
+    transition: color,border,background-color 0.3s ease;
+    margin: 3%;
+    margin-top: 0;
+}
+.add-to-cart:hover{
+    background-color: blueviolet;
+    color:white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.buy-now{
+    width: 200px;
+    height: 100px;
+    background-color: blueviolet;
+    color:white;
+    border: 1px solid white;
+    outline: none;
+    transition: color,border,background-color 0.3s ease;
+    margin: 3%;
+    margin-top: 0;
+}
+.buy-now:hover{
+    background-color: white;
+    color:blueviolet;
+    border: 1px solid blueviolet;
+    cursor: pointer;
+}
+.fa-star{
+   align-self: flex-end;
+   color: orange;
+   position: static;
+}
+.technical{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+}
+.specification{
+    border: 1px solid blueviolet;
+    width: 50%;
+    margin-left: 5%;
+}
+.type:last-child{
+    border-bottom:1px solid black;
+}
+.memory li{
+    border-top:1px solid black;
+    padding: 10px;
+    list-style: none;
+}
+.memory{
+    margin-top:20px;
+    border: 1px solid blueviolet;
+    width: 50%;
+    margin-left: 5%;
+}
+.answer{
+    font-weight: bold;
+    border-top:1px solid black;
+    padding: 10px;
+    list-style: none;
+}
+.question{
+    border-top:1px solid black;
+    padding: 10px;
+    list-style: none; 
+}
+.category{
+    font-weight: bolder;
+    font-size: 28px;
+    list-style: none; 
+}
+.services{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin:5%;
+    width: 100%;
+}
+.services h1{
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    border-top: 2px solid black;
+    padding: 5px;
+    margin-bottom: 0;
+    margin-top:0;
+    position: relative; 
+}
+.services h1:hover{
+    cursor: pointer;
+    background-color: aliceblue;
+}
+.box-content{
+    transition: height 0.3s cubic-bezier(0.10, 0.80, 0.80, 0.70);
+    height: 0;
+}
+.content{
+    height: 0;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.76);
+}
+.box-gwarantion{
+    transition: height 0.3s cubic-bezier(0.10, 0.80, 0.80, 0.70);
+    height: 0;
+}
+.box-contact{
+    transition: height 0.3s cubic-bezier(0.10, 0.80, 0.80, 0.70);
+    border-bottom: 2px solid black;
+    height: 0;
+}
+.fa-angle-down{
+    font-size: 35px;
+    top:50%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+/*style for AboutUs.html*/
+
+
+
+
