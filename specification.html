@@ -21,10 +21,31 @@
                             <a href="file:///C:/Users/User/Desktop/WWW/shop.html"><li>Products</li></a>
                             <a href="#"><li>Contact</li></a>
                             <a href="#"><li>About us</li></a>
-                            <a href="#"><li>Cart<i class="fas fa-cart-plus"></i></li></a>
+                             <li class="nav-hover-effect" onclick="showCart()">Cart<i class="fas fa-cart-plus"></i></li>
+                        <div class="cart">
+                            <div class="cart-empty"></div>
+                            <div class="cart-items">
+                                <div class="miniature"><img src="img/laptop0.jpeg"> </div>
+                                <div class="name">Laptop lenovo coś tam</div>
+                                <div class="description-cart">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                    elit.
+                                    Omnis nulla nam eos asperiores ullam natus? Atque dignissimos enim consectetur
+                                    iure sint voluptates consequuntur tempore placeat. Fugiat libero sit nostrum
+                                </div>
+                                <div class="pieces">
+                                    <form name="products">
+                                        <input id="counter-products" type="number" name="a">
+                                    </form>
+                                    <div class="plus" onclick="increase()">+</div>
+                                    <div class="minus" onclick="countdown()">-</div>
+                                </div>
+                                <div class="final-price">2000zł</div>
+                                <button class="btn-remove" onclick="removeIteam()">Remove</button>
+                            </div>
                         </div>
+                        </div>                    
+                     </div>
                     </nav>
-                </div>
                 <div class="box-specification">
                     <div class="slider2"><div class="swipe-left"onclick="swipeLeft()"><i class="fas fa-angle-left"></i></div><div class="product"><img src="img/image0.jpg"alt="laptop"></div>
                     <div class="swipe-right"onclick="swipeRight()"><i class="fas fa-angle-right"></i></div></div>
