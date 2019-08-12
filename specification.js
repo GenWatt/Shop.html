@@ -84,5 +84,79 @@ var counter=0;
     counter2++;
   }
   
+  let products = 0;
+
+function addToCart() {
+  products = 1;
+  CountProducts();
+}
+counter = 0;
+
+function showCart() {
+  const cart = document.querySelector(".cart");
+  if (counter == 0) {
+    cart.style.display = "grid";
+    counter++;
+  } else {
+    cart.style.display = "none";
+    counter = 0;
+  }
+  if (products == 0) {
+    const cartEmpty = document.querySelector(".cart-empty");
+    const cartItems = document.querySelector(".cart-items");
+    cartItems.style.display = "none";
+    cartEmpty.textContent = "Cart is empty";
+    cartEmpty.classList.add("center");
+  } else {
+    const cartEmpty = document.querySelector(".cart-empty");
+    const cartItems = document.querySelector(".cart-items");
+    cartItems.style.display = "grid";
+    cartEmpty.textContent = "";
+    cartEmpty.classList.remove("center");
+  }
+}
+
+function increase() {
+
+  if (products > 0) {
+    products++;
+    calculation(products);
+    CountProducts();
+  }
+}
+
+
+function countdown() {
+  products--;
+  if (products <= 0) {
+    products = 1;
+  }
+  calculation(products);
+  CountProducts();
+}
+
+function CountProducts() {
+  let numberProducts = document.getElementById("counter-products").value = products;
+}
+
+function calculation() {
+  let priceElement = document.querySelector(".price").innerHTML;
+  let price = products * parseFloat(priceElement);
+  finalPrice(price);
+}
+
+function finalPrice(price) {
+  let finalPrice = document.querySelector(".final-price");
+  finalPrice.textContent = price + "zł";
+
+}
+
+function removeIteam() {
+  const cartEmpty = document.querySelector(".cart-empty");
+  const cartItems = document.querySelector(".cart-items");
+  cartItems.style.display = "none";
+  cartEmpty.textContent = "Cart is empty";
+  cartEmpty.classList.add("center");
+}
   
 
